@@ -1,0 +1,6 @@
+framework module Pods_YDPlayer {
+  umbrella header "Pods-YDPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
