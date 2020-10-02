@@ -79,7 +79,7 @@ public class YDPlayerView: UIView {
 
 	private func assignContentViewConstraints() {
 		contentView.translatesAutoresizingMaskIntoConstraints = false
-		let topAnchor = contentView.topAnchor.constraint(equalTo: safeTopAnchor)
+		let topAnchor = contentView.topAnchor.constraint(equalTo: self.topAnchor)
 		let bottomAnchor = contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 		let trailingAnchor = contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
 		let leadingAnchor = contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
@@ -94,7 +94,7 @@ public class YDPlayerView: UIView {
 		}
 
 		player.translatesAutoresizingMaskIntoConstraints = false
-		let topAnchor = player.topAnchor.constraint(equalTo: safeTopAnchor)
+		let topAnchor = player.topAnchor.constraint(equalTo: self.topAnchor)
 		let bottomAnchor = player.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 		let trailingAnchor = player.trailingAnchor.constraint(equalTo: self.trailingAnchor)
 		let leadingAnchor = player.leadingAnchor.constraint(equalTo: self.leadingAnchor)
