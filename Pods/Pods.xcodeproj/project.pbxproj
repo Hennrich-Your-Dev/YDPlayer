@@ -8,28 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		05DBC5A4A0411FC0868B1355180CD35D /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D0B88B1CA58F120B0DD63B31D8F08D /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E796D2E2346FA0A860EE514EDC62C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		1F016055D07EE17F829129D2300318EA /* Pods-YDPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9242D0A83295A305EF0CB189CC51AE /* Pods-YDPlayer-dummy.m */; };
-		3B73D9425BFEF073BA34FED73EDB3195 /* Pods-YDPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4C355F0796B2AA67DC725157C920E6 /* Pods-YDPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1445F834431743C6E7E000ECAA4DE276 /* Pods-YDPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4C355F0796B2AA67DC725157C920E6 /* Pods-YDPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		559F7D2DAA6D86E23F8B2A651777E5BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5FF166F2E8DA909935E9EC0CEB273635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		7D8C05366F87C046219EDCB835447400 /* youtube-ios-player-helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFE57F92A2BCA45F0B915636C2174B0 /* youtube-ios-player-helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E002A9F76669B8F355A1E53003E96D9 /* Pods-YDPlayerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B45E7E3ED524B8FD493B4B24382A1A34 /* Pods-YDPlayerTests-dummy.m */; };
+		86FF35F8A42CDF7E816B0FE759A4DB35 /* Pods-YDPlayerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B45E7E3ED524B8FD493B4B24382A1A34 /* Pods-YDPlayerTests-dummy.m */; };
 		95360566E941F235D6B8CE1C4C3035D1 /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5144F9A0A4ADE00B187AF5D85E2BC /* youtube-ios-player-helper-dummy.m */; };
+		9706B35FE257C412F095722974902EC1 /* Pods-YDPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9242D0A83295A305EF0CB189CC51AE /* Pods-YDPlayer-dummy.m */; };
 		A8C22822FA929E89335F959F79BD29D2 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7250721FFCCD343A0F32532251AD4810 /* Assets.bundle */; };
-		B82DE5644956D67567803B217C2C4CE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B78FBA3B8EBC12D142B4EC66DA5E2A21 /* Pods-YDPlayerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC13919817B0C86EC8EB3AC936470226 /* Pods-YDPlayerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03B6BD25AEC918C55C1A092C4ED472B /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A952A9049E5998128388F9E5A4CC4 /* YTPlayerView.m */; };
-		ED31E5548568C345B2D00C7C2D44D37F /* Pods-YDPlayerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC13919817B0C86EC8EB3AC936470226 /* Pods-YDPlayerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC5E37B850CC40C141FC7033E96FE48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CB3379A2248FE0929E27EE7344BE1FFE /* PBXContainerItemProxy */ = {
+		2411B15D51AFEFE59B09AB256E98B0A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D1A7AF186BE136DE56FD5699070589B8;
 			remoteInfo = "youtube-ios-player-helper";
 		};
-		E15D665C13663BF6F2A749FF7AFD24D8 /* PBXContainerItemProxy */ = {
+		5C918C26E5DB139C2FD7FD2CBD1F1A82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -82,19 +82,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7217967EA3EC207350E878CD1415AD67 /* Frameworks */ = {
+		A273112C60B3547A45EDC9D496A52B05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B82DE5644956D67567803B217C2C4CE5 /* Foundation.framework in Frameworks */,
+				5FF166F2E8DA909935E9EC0CEB273635 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B60A328F03055E5E685EDA323EF2C4E6 /* Frameworks */ = {
+		F2D3284D529969619CD8313886928ED6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E796D2E2346FA0A860EE514EDC62C9D /* Foundation.framework in Frameworks */,
+				FCC5E37B850CC40C141FC7033E96FE48 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,11 +226,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3E9E4CC1E4EC3F1EE0270FA8B529ACE9 /* Headers */ = {
+		019E535CE37BFFE14E44B89523121806 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED31E5548568C345B2D00C7C2D44D37F /* Pods-YDPlayerTests-umbrella.h in Headers */,
+				1445F834431743C6E7E000ECAA4DE276 /* Pods-YDPlayer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,11 +243,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA7F8484557C195C392043D19E0F28A9 /* Headers */ = {
+		C258748D0CD03AF515692B45B6DDD805 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B73D9425BFEF073BA34FED73EDB3195 /* Pods-YDPlayer-umbrella.h in Headers */,
+				B78FBA3B8EBC12D142B4EC66DA5E2A21 /* Pods-YDPlayerTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,17 +256,17 @@
 /* Begin PBXNativeTarget section */
 		727EFEEA6BACE4813DD8A296FFFB02C6 /* Pods-YDPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD3AF5B70904E5DAA1B2C13C10A1D210 /* Build configuration list for PBXNativeTarget "Pods-YDPlayerTests" */;
+			buildConfigurationList = 24A4F93E150D09CD22E00FA85A2D585D /* Build configuration list for PBXNativeTarget "Pods-YDPlayerTests" */;
 			buildPhases = (
-				3E9E4CC1E4EC3F1EE0270FA8B529ACE9 /* Headers */,
-				B907741973C38A6DCCD3ACE352F5D8DC /* Sources */,
-				B60A328F03055E5E685EDA323EF2C4E6 /* Frameworks */,
-				67C58BD3D318E69C58B5EFD767791575 /* Resources */,
+				C258748D0CD03AF515692B45B6DDD805 /* Headers */,
+				CB733B42CF760323DD50C5760D900159 /* Sources */,
+				F2D3284D529969619CD8313886928ED6 /* Frameworks */,
+				23391FB8B7A17F1A9E7A9306E6593DF9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C4773F740BAAE8D4341AFB6B0D556230 /* PBXTargetDependency */,
+				FE2D23EF2D4EB5042916ABFBB8FEB978 /* PBXTargetDependency */,
 			);
 			name = "Pods-YDPlayerTests";
 			productName = "Pods-YDPlayerTests";
@@ -275,17 +275,17 @@
 		};
 		8FAB1EFC41B6C6B3CAE80929698BA537 /* Pods-YDPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A62A1FA7FE8F7777E7883A0592215D0 /* Build configuration list for PBXNativeTarget "Pods-YDPlayer" */;
+			buildConfigurationList = 4DD13FDA5D6CEE4A160ADAC3F14679B0 /* Build configuration list for PBXNativeTarget "Pods-YDPlayer" */;
 			buildPhases = (
-				CA7F8484557C195C392043D19E0F28A9 /* Headers */,
-				C2F88835C952F28348829BD51B7A47B9 /* Sources */,
-				7217967EA3EC207350E878CD1415AD67 /* Frameworks */,
-				65A22512475BFA81A84BB98449F2209A /* Resources */,
+				019E535CE37BFFE14E44B89523121806 /* Headers */,
+				6FB9338D0561C65FFCB9E5DB60C3A1B2 /* Sources */,
+				A273112C60B3547A45EDC9D496A52B05 /* Frameworks */,
+				5548C10D2A01FD840F6481D17BC3EED0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E72D8B5C29FF4A69D39634A3C14E42A0 /* PBXTargetDependency */,
+				054C3CA9111DA59231363A7E02B626F9 /* PBXTargetDependency */,
 			);
 			name = "Pods-YDPlayer";
 			productName = "Pods-YDPlayer";
@@ -340,25 +340,25 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		23391FB8B7A17F1A9E7A9306E6593DF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5548C10D2A01FD840F6481D17BC3EED0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D870BFFEC56FA6BCB0BD3F7C619A53D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A8C22822FA929E89335F959F79BD29D2 /* Assets.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65A22512475BFA81A84BB98449F2209A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67C58BD3D318E69C58B5EFD767791575 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,43 +374,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B907741973C38A6DCCD3ACE352F5D8DC /* Sources */ = {
+		6FB9338D0561C65FFCB9E5DB60C3A1B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E002A9F76669B8F355A1E53003E96D9 /* Pods-YDPlayerTests-dummy.m in Sources */,
+				9706B35FE257C412F095722974902EC1 /* Pods-YDPlayer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2F88835C952F28348829BD51B7A47B9 /* Sources */ = {
+		CB733B42CF760323DD50C5760D900159 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F016055D07EE17F829129D2300318EA /* Pods-YDPlayer-dummy.m in Sources */,
+				86FF35F8A42CDF7E816B0FE759A4DB35 /* Pods-YDPlayerTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C4773F740BAAE8D4341AFB6B0D556230 /* PBXTargetDependency */ = {
+		054C3CA9111DA59231363A7E02B626F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "youtube-ios-player-helper";
 			target = D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */;
-			targetProxy = CB3379A2248FE0929E27EE7344BE1FFE /* PBXContainerItemProxy */;
+			targetProxy = 2411B15D51AFEFE59B09AB256E98B0A0 /* PBXContainerItemProxy */;
 		};
-		E72D8B5C29FF4A69D39634A3C14E42A0 /* PBXTargetDependency */ = {
+		FE2D23EF2D4EB5042916ABFBB8FEB978 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "youtube-ios-player-helper";
 			target = D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */;
-			targetProxy = E15D665C13663BF6F2A749FF7AFD24D8 /* PBXContainerItemProxy */;
+			targetProxy = 5C918C26E5DB139C2FD7FD2CBD1F1A82 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FEABD340477E8F1B202080F6D1C3B6E /* Release */ = {
+		051D12B7EC7EC101F5BB9A1F17CA1175 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA9D13CEDDC7A8C7492F53283C10BC68 /* Pods-YDPlayerTests.release.xcconfig */;
+			baseConfigurationReference = 4309F93DDB28650B541E2C1FA3BF9FE2 /* Pods-YDPlayerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -441,11 +441,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -507,9 +506,9 @@
 			};
 			name = Release;
 		};
-		64C9A9E6C660710133078084A89E5A69 /* Release */ = {
+		5C96E7A4B9462968D761FC36C6C30195 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D519943B551914667EB06AFA94F237FF /* Pods-YDPlayer.release.xcconfig */;
+			baseConfigurationReference = CA9D13CEDDC7A8C7492F53283C10BC68 /* Pods-YDPlayerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -522,7 +521,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-YDPlayer/Pods-YDPlayer-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-YDPlayerTests/Pods-YDPlayerTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,7 +530,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YDPlayer/Pods-YDPlayer.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-YDPlayerTests/Pods-YDPlayerTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -546,7 +545,7 @@
 			};
 			name = Release;
 		};
-		889759406B047CBE009C5399F428B4DA /* Debug */ = {
+		83DDB3BF574BF29A0F63E3A7EE7EC88D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 600F028A4E35A74B326CC2F2E4616568 /* Pods-YDPlayer.debug.xcconfig */;
 			buildSettings = {
@@ -584,9 +583,9 @@
 			};
 			name = Debug;
 		};
-		A2AB417FD48E7AC87C72FBC1DB359D2E /* Debug */ = {
+		9D01C099033325FFCB6D7397EB76416E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4309F93DDB28650B541E2C1FA3BF9FE2 /* Pods-YDPlayerTests.debug.xcconfig */;
+			baseConfigurationReference = D519943B551914667EB06AFA94F237FF /* Pods-YDPlayer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -599,7 +598,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-YDPlayerTests/Pods-YDPlayerTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-YDPlayer/Pods-YDPlayer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -608,7 +607,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-YDPlayerTests/Pods-YDPlayerTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-YDPlayer/Pods-YDPlayer.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -617,10 +616,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -771,6 +771,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		24A4F93E150D09CD22E00FA85A2D585D /* Build configuration list for PBXNativeTarget "Pods-YDPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051D12B7EC7EC101F5BB9A1F17CA1175 /* Debug */,
+				5C96E7A4B9462968D761FC36C6C30195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -780,20 +789,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A62A1FA7FE8F7777E7883A0592215D0 /* Build configuration list for PBXNativeTarget "Pods-YDPlayer" */ = {
+		4DD13FDA5D6CEE4A160ADAC3F14679B0 /* Build configuration list for PBXNativeTarget "Pods-YDPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				889759406B047CBE009C5399F428B4DA /* Debug */,
-				64C9A9E6C660710133078084A89E5A69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD3AF5B70904E5DAA1B2C13C10A1D210 /* Build configuration list for PBXNativeTarget "Pods-YDPlayerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A2AB417FD48E7AC87C72FBC1DB359D2E /* Debug */,
-				0FEABD340477E8F1B202080F6D1C3B6E /* Release */,
+				83DDB3BF574BF29A0F63E3A7EE7EC88D /* Debug */,
+				9D01C099033325FFCB6D7397EB76416E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
