@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDPlayer"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Live video player for B2W."
   spec.homepage     = "https://www.yourdev.com.br"
   spec.license      = "MIT"

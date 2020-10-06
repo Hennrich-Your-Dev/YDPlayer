@@ -12,6 +12,18 @@ import WebKit
 
 fileprivate let enterForeground = NSNotification.Name("foreground")
 
+// MARK: Enum
+public enum PlayerStage {
+	case playing
+	case paused
+}
+
+// MARK: Delegate
+public protocol YDPlayerDelegate: AnyObject {
+	func onStageChange(stage: PlayerStage)
+}
+
+// MARK: Class
 public class YDPlayerView: UIView {
 
 	// MARK: Properties
@@ -19,6 +31,8 @@ public class YDPlayerView: UIView {
 	private var config: YDPlayerConfiguration?
 	private var player: YTPlayerView?
 	private var enterFullScreen: Bool = false
+
+	public var delegate: YDPlayerDelegate?
 
 	// MARK: IBOutlets
 	@IBOutlet var contentView: UIView!
@@ -159,6 +173,7 @@ public class YDPlayerView: UIView {
 
 }
 
+// MARK: YouTube player delegate
 extension YDPlayerView: YTPlayerViewDelegate {
 
 	public func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
@@ -170,10 +185,10 @@ extension YDPlayerView: YTPlayerViewDelegate {
 		case .unstarted, .ended:
 			break
 		case .playing:
-			print("playing")
+			delegate?.onStageChange(stage: .playing)
 
 		case .paused:
-			print("paused")
+			delegate?.onStageChange(stage: .paused)
 
 		case .buffering:
 			print("buffering")
@@ -190,4 +205,3 @@ extension YDPlayerView: YTPlayerViewDelegate {
 	}
 
 }
-

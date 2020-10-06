@@ -17,7 +17,7 @@ public class YDPlayerConfiguration {
     
     // MARK: Init
     public init(withWidth width: CGFloat = UIApplication.shared
-        .windows.first?.bounds.width ?? 320,
+        .windows.first?.bounds.width ?? 414,
                 withHeight height: CGFloat = 300,
                 withVideoId videoId: String) {
         self.width = width
