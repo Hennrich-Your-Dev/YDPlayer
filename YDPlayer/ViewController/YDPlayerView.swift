@@ -14,194 +14,193 @@ fileprivate let enterForeground = NSNotification.Name("foreground")
 
 // MARK: Enum
 public enum PlayerStage {
-	case playing
-	case paused
+  case playing
+  case paused
 }
 
 // MARK: Delegate
 public protocol YDPlayerDelegate: AnyObject {
-	func onStageChange(stage: PlayerStage)
+  func onStageChange(stage: PlayerStage)
 }
 
 // MARK: Class
 public class YDPlayerView: UIView {
 
-	// MARK: Properties
-	private var parent: UIView?
-	private var config: YDPlayerConfiguration?
-	private var player: YTPlayerView?
-	private var enterFullScreen: Bool = false
+  // MARK: Properties
+  private var parent: UIView?
+  private var config: YDPlayerConfiguration?
+  private var player: YTPlayerView?
+  private var enterFullScreen: Bool = false
 
-	public var delegate: YDPlayerDelegate?
+  public var delegate: YDPlayerDelegate?
 
-	// MARK: IBOutlets
-	@IBOutlet var contentView: UIView!
+  // MARK: IBOutlets
+  @IBOutlet var contentView: UIView!
 
-	// MARK: Life cycle
-	deinit {
-		NotificationCenter.default.removeObserver(self)
-	}
+  // MARK: Life cycle
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
 
-	@discardableResult
-	public init(with config: YDPlayerConfiguration, parent: UIView) {
-		super.init(frame: CGRect(x: 0,
-														 y: 0,
-														 width: config.width,
-														 height: config.height))
-		commonInit()
+  @discardableResult
+  public init(with config: YDPlayerConfiguration, parent: UIView) {
+    super.init(frame: CGRect(x: 0,
+                             y: 0,
+                             width: config.width,
+                             height: config.height))
+    commonInit()
 
-		self.parent = parent
-		self.config = config
+    self.parent = parent
+    self.config = config
 
-		parent.addSubview(self)
-		assignParentConstraints()
-		configurePlayer()
-	}
+    parent.addSubview(self)
+    assignParentConstraints()
+    configurePlayer()
+  }
 
-	required init?(coder: NSCoder) {
-		fatalError("Don't implemented")
-	}
+  required init?(coder: NSCoder) {
+    fatalError("Don't implemented")
+  }
 
-	public override func layoutSubviews() {
-		super.layoutSubviews()
+  public override func layoutSubviews() {
+    super.layoutSubviews()
 
-		addObservers()
-	}
+    addObservers()
+  }
 
-	// MARK: Private actions
-	private func commonInit() {
-		contentView = loadNib()
-		addSubview(contentView)
-	}
+  // MARK: Private actions
+  private func commonInit() {
+    contentView = loadNib()
+    addSubview(contentView)
+  }
 
-	private func assignParentConstraints() {
-		guard let parent = parent,
-			let config = config
-			else {
-				fatalError("Don't have parent")
-		}
+  private func assignParentConstraints() {
+    guard let parent = parent
+      else {
+        fatalError("Don't have parent")
+    }
 
-		translatesAutoresizingMaskIntoConstraints = false
-		let topAnchor = self.topAnchor.constraint(equalTo: parent.topAnchor)
-		let trailingAnchor = self.rightAnchor.constraint(equalTo: parent.safeRightAnchor)
-		let leadingAnchor = self.leftAnchor.constraint(equalTo: parent.safeLeftAnchor)
-		let heightAnchor = self.heightAnchor.constraint(equalToConstant: config.height)
-		parent.addConstraints([topAnchor, trailingAnchor, leadingAnchor, heightAnchor])
+    translatesAutoresizingMaskIntoConstraints = false
+    let topAnchor = self.topAnchor.constraint(equalTo: parent.topAnchor)
+    let trailingAnchor = self.leadingAnchor.constraint(equalTo: parent.leadingAnchor)
+    let leadingAnchor = self.trailingAnchor.constraint(equalTo: parent.trailingAnchor)
+    let bottomAnchor = self.bottomAnchor.constraint(equalTo: parent.bottomAnchor)
+    parent.addConstraints([topAnchor, trailingAnchor, leadingAnchor, bottomAnchor])
 
-		assignContentViewConstraints()
-	}
+    assignContentViewConstraints()
+  }
 
-	private func assignContentViewConstraints() {
-		contentView.translatesAutoresizingMaskIntoConstraints = false
-		let topAnchor = contentView.topAnchor.constraint(equalTo: self.topAnchor)
-		let bottomAnchor = contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-		let trailingAnchor = contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-		let leadingAnchor = contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+  private func assignContentViewConstraints() {
+    contentView.translatesAutoresizingMaskIntoConstraints = false
+    let topAnchor = contentView.topAnchor.constraint(equalTo: self.topAnchor)
+    let bottomAnchor = contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+    let trailingAnchor = contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+    let leadingAnchor = contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
 
-		addConstraints([topAnchor, trailingAnchor, leadingAnchor, bottomAnchor])
-	}
+    addConstraints([topAnchor, trailingAnchor, leadingAnchor, bottomAnchor])
+  }
 
-	private func assignPlayerConstraints() {
-		guard let player = player
-			else {
-				fatalError("Don't have player")
-		}
+  private func assignPlayerConstraints() {
+    guard let player = player
+      else {
+        fatalError("Don't have player")
+    }
 
-		player.translatesAutoresizingMaskIntoConstraints = false
-		let topAnchor = player.topAnchor.constraint(equalTo: self.topAnchor)
-		let bottomAnchor = player.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-		let trailingAnchor = player.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-		let leadingAnchor = player.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+    player.translatesAutoresizingMaskIntoConstraints = false
+    let topAnchor = player.topAnchor.constraint(equalTo: self.topAnchor)
+    let bottomAnchor = player.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+    let trailingAnchor = player.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+    let leadingAnchor = player.leadingAnchor.constraint(equalTo: self.leadingAnchor)
 
-		addConstraints([topAnchor, trailingAnchor, leadingAnchor, bottomAnchor])
-	}
+    addConstraints([topAnchor, trailingAnchor, leadingAnchor, bottomAnchor])
+  }
 
-	private func configurePlayer() {
-		guard let config = config else {
-			fatalError("Don't have config")
-		}
+  private func configurePlayer() {
+    guard let config = config else {
+      fatalError("Don't have config")
+    }
 
-		player = YTPlayerView()
-		contentView.addSubview(player!)
+    player = YTPlayerView()
+    contentView.addSubview(player!)
 
-		player?.delegate = self
-		player?.load(withVideoId: config.videoId,
-								 playerVars: [
-									"playsinline": 1,
-									"autoplay": 1,
-									"controls": 1,
-									"modestbranding": 0,
-									"iv_load_policy": 2
-		])
+    player?.delegate = self
+    player?.load(withVideoId: config.videoId,
+                 playerVars: [
+                  "playsinline": 1,
+                  "autoplay": 1,
+                  "controls": 1,
+                  "modestbranding": 0,
+                  "iv_load_policy": 2
+    ])
 
-		assignPlayerConstraints()
-	}
+    assignPlayerConstraints()
+  }
 
-	// MARK: Observers
-	private func addObservers() {
-		NotificationCenter.default.addObserver(self,
-																					 selector: #selector(playVideoAction),
-																					 name: enterForeground,
-																					 object: nil)
+  // MARK: Observers
+  private func addObservers() {
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(playVideoAction),
+                                           name: enterForeground,
+                                           object: nil)
 
-		NotificationCenter.default.addObserver(self,
-																					 selector: #selector(enterFullScreenObserver),
-																					 name: UIWindow.didResignKeyNotification,
-																					 object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(enterFullScreenObserver),
+                                           name: UIWindow.didResignKeyNotification,
+                                           object: nil)
 
-		NotificationCenter.default.addObserver(self,
-																					 selector: #selector(exitFullScreen),
-																					 name: UIWindow.didBecomeKeyNotification,
-																					 object: nil)
-	}
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(exitFullScreen),
+                                           name: UIWindow.didBecomeKeyNotification,
+                                           object: nil)
+  }
 
-	@objc private func playVideoAction() {
-		player?.playVideo()
-	}
+  @objc private func playVideoAction() {
+    player?.playVideo()
+  }
 
-	@objc private func enterFullScreenObserver() {
-		enterFullScreen = true
-	}
+  @objc private func enterFullScreenObserver() {
+    enterFullScreen = true
+  }
 
-	@objc private func exitFullScreen() {
-		if enterFullScreen {
-			player?.playVideo()
-		}
+  @objc private func exitFullScreen() {
+    if enterFullScreen {
+      player?.playVideo()
+    }
 
-		enterFullScreen = false
-	}
+    enterFullScreen = false
+  }
 
 }
 
 // MARK: YouTube player delegate
 extension YDPlayerView: YTPlayerViewDelegate {
 
-	public func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-		playerView.playVideo()
-	}
+  public func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+    playerView.playVideo()
+  }
 
-	public func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
-		switch state {
-		case .unstarted, .ended:
-			break
-		case .playing:
-			delegate?.onStageChange(stage: .playing)
+  public func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+    switch state {
+    case .unstarted, .ended:
+      break
+    case .playing:
+      delegate?.onStageChange(stage: .playing)
 
-		case .paused:
-			delegate?.onStageChange(stage: .paused)
+    case .paused:
+      delegate?.onStageChange(stage: .paused)
 
-		case .buffering:
-			print("buffering")
-			
-		case .cued:
-			print("cued")
+    case .buffering:
+      print("buffering")
 
-		case .unknown:
-			print("unknown")
+    case .cued:
+      print("cued")
 
-		@unknown    default:
-			break
-		}
-	}
+    case .unknown:
+      print("unknown")
+
+    @unknown    default:
+      break
+    }
+  }
 
 }
